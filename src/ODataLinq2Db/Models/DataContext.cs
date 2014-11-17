@@ -4,7 +4,7 @@ using System.Linq;
 using LinqToDB;
 using LinqToDB.Data;
 
-namespace WebApiLinq2Db.Models
+namespace ODataLinq2Db.Models
 {
     public class DataContext : DataConnection
     {

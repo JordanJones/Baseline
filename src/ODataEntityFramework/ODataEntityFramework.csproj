@@ -140,6 +140,7 @@
       <DependentUpon>BaselinePerformanceModel.edmx</DependentUpon>
       <LastGenOutput>BaselinePerformanceModel.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\Baseline.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
