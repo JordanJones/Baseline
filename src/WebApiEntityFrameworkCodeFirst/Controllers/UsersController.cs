@@ -3,9 +3,9 @@ using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
 
-using WebApiLinq2Db.Models;
+using WebApiEntityFrameworkCodeFirst.Models;
 
-namespace WebApiLinq2Db.Controllers
+namespace WebApiEntityFrameworkCodeFirst.Controllers
 {
     public class UsersController : ApiController
     {
@@ -18,7 +18,7 @@ namespace WebApiLinq2Db.Controllers
 
         private IQueryable<Users> GetUsers(int count, Action<IDisposable> disposable)
         {
-            var db = new DataContext();
+            var db = new BaselineEntities();
             disposable(db);
             return db.Users.Take(count);
         }

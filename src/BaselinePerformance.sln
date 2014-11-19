@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataEntityFramework", "ODa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataLinq2Db", "ODataLinq2Db\ODataLinq2Db.csproj", "{9660FAE4-5B25-42C5-A582-5ED5E9196784}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataEntityFrameworkCodeFirst", "ODataEntityFrameworkCodeFirst\ODataEntityFrameworkCodeFirst.csproj", "{EDC86678-3E31-4CB9-99A6-81498BCFD6C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiEntityFrameworkCodeFirst", "WebApiEntityFrameworkCodeFirst\WebApiEntityFrameworkCodeFirst.csproj", "{055C4B39-3178-4174-9345-6728AD646B4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{9660FAE4-5B25-42C5-A582-5ED5E9196784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9660FAE4-5B25-42C5-A582-5ED5E9196784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9660FAE4-5B25-42C5-A582-5ED5E9196784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC86678-3E31-4CB9-99A6-81498BCFD6C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC86678-3E31-4CB9-99A6-81498BCFD6C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC86678-3E31-4CB9-99A6-81498BCFD6C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC86678-3E31-4CB9-99A6-81498BCFD6C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055C4B39-3178-4174-9345-6728AD646B4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055C4B39-3178-4174-9345-6728AD646B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055C4B39-3178-4174-9345-6728AD646B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055C4B39-3178-4174-9345-6728AD646B4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

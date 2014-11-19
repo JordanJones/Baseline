@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Linq;
 using System.Net.Http;
-using System.Web.Http;
+using System.Web.Http.OData;
 
-using WebApiLinq2Db.Models;
+using ODataEntityFrameworkCodeFirst.Models;
 
-namespace WebApiLinq2Db.Controllers
+namespace ODataEntityFrameworkCodeFirst.Controllers
 {
-    public class UsersController : ApiController
+    public class UsersController : EntitySetController<Users, int>
     {
 
-        [Route("Users"), HttpGet]
-        public IQueryable<Users> GetLarge()
+        public override IQueryable<Users> Get()
         {
             return GetUsers(1000, Request.RegisterForDispose);
         }
 
         private IQueryable<Users> GetUsers(int count, Action<IDisposable> disposable)
         {
-            var db = new DataContext();
+            var db = new BaselineEntities();
             disposable(db);
             return db.Users.Take(count);
         }

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Web.Http;
 
-namespace WebApiEntityFramework
+namespace WebApiEntityFrameworkCodeFirst
 {
     public static class WebApiConfig
     {

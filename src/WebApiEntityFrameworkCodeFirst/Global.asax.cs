@@ -3,7 +3,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 
-namespace WebApiEntityFramework
+namespace WebApiEntityFrameworkCodeFirst
 {
     public class WebApiApplication : HttpApplication
     {

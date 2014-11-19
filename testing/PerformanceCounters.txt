@@ -1,0 +1,8 @@
+\Process(w3wp)\Working Set - Private
+\Process(w3wp)\% Processor Time
+\Process(sqlservr)\Working Set - Private
+\Process(sqlservr)\% Processor Time
+\SQLServer:Transactions\Transactions
+\.NET Data Provider for SqlServer(*)\SoftConnectsPerSecond
+\.NET Data Provider for SqlServer(*)\NumberOfPooledConnections
+\.NET Data Provider for SqlServer(*)\NumberOfActiveConnections

@@ -4,9 +4,9 @@ using System.Web.Http;
 using System.Web.Http.OData.Builder;
 using System.Web.Http.OData.Extensions;
 
-using ODataEntityFramework.Models;
+using ODataEntityFrameworkCodeFirst.Models;
 
-namespace ODataEntityFramework
+namespace ODataEntityFrameworkCodeFirst
 {
     public static class WebApiConfig
     {

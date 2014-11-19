@@ -7,7 +7,7 @@ using ODataEntityFramework.Models;
 
 namespace ODataEntityFramework.Controllers
 {
-    
+
     public class UsersController : EntitySetController<Users, int>
     {
 
@@ -22,5 +22,6 @@ namespace ODataEntityFramework.Controllers
             disposable(db);
             return db.Users.Take(count);
         }
+
     }
 }

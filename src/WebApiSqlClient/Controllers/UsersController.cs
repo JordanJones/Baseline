@@ -13,21 +13,7 @@ namespace WebApiSqlClient.Controllers
     public class UsersController : ApiController
     {
 
-        [Route("Users/Small"), HttpGet]
-        public IEnumerable<Users> GetSmall()
-        {
-            return GetUsers(10, Request.RegisterForDispose);
-        }
-        
-
-        [Route("Users/Medium"), HttpGet]
-        public IEnumerable<Users> GetMedium()
-        {
-            return GetUsers(500, Request.RegisterForDispose);
-        }
-        
-        
-        [Route("Users"), Route("Users/Large"), HttpGet]
+        [Route("Users"), HttpGet]
         public IEnumerable<Users> GetLarge()
         {
             return GetUsers(1000, Request.RegisterForDispose);
@@ -35,13 +21,12 @@ namespace WebApiSqlClient.Controllers
 
         private IEnumerable<Users> GetUsers(int count, Action<IDisposable> disposable)
         {
-            var results = new List<Users>();
             var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["BaselineTesting"].ConnectionString);
             conn.Open();
             disposable(conn);
             using (var cmd = conn.CreateCommand())
             {
-                cmd.CommandText = string.Format("SELECT TOP {0} [Id], [FirstName], [LastName], [EmailAddress] FROM [Users] ORDER BY NEWID()", count);
+                cmd.CommandText = string.Format("SELECT TOP {0} [Id], [FirstName], [LastName], [EmailAddress] FROM [Users]", count);
 
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -55,14 +40,12 @@ namespace WebApiSqlClient.Controllers
                             EmailAddress = reader.GetString(3)
                         };
 
-                        results.Add(obj);
+                        yield return obj;
                     }
                     reader.Close();
                 }
-
             }
-
-            return results;
         }
+
     }
 }
